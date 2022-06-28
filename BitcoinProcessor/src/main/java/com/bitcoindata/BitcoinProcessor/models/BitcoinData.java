@@ -1,7 +1,5 @@
 package com.bitcoindata.BitcoinProcessor.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -50,7 +48,6 @@ public class BitcoinData {
         return timestamp;
     }
 
-    @JsonProperty("Timestamp")
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
@@ -67,7 +64,6 @@ public class BitcoinData {
         return open;
     }
 
-    @JsonProperty("Open")
     public void setOpen(String open) {
         this.open = open;
     }
@@ -76,7 +72,6 @@ public class BitcoinData {
         return high;
     }
 
-    @JsonProperty("High")
     public void setHigh(String high) {
         this.high = high;
     }
@@ -85,7 +80,6 @@ public class BitcoinData {
         return low;
     }
 
-    @JsonProperty("Low")
     public void setLow(String low) {
         this.low = low;
     }
@@ -94,7 +88,6 @@ public class BitcoinData {
         return close;
     }
 
-    @JsonProperty("Close")
     public void setClose(String close) {
         this.close = close;
     }
@@ -103,7 +96,6 @@ public class BitcoinData {
         return volume_btc;
     }
 
-    @JsonProperty("Volume_(BTC)")
     public void setVolume_btc(String volume_btc) {
         this.volume_btc = volume_btc;
     }
@@ -112,7 +104,6 @@ public class BitcoinData {
         return volume_currency;
     }
 
-    @JsonProperty("Volume_(Currency)")
     public void setVolume_currency(String volume_currency) {
         this.volume_currency = volume_currency;
     }
@@ -121,7 +112,6 @@ public class BitcoinData {
         return weighted_price;
     }
 
-    @JsonProperty("Weighted_Price")
     public void setWeighted_price(String weighted_price) {
         this.weighted_price = weighted_price;
     }
