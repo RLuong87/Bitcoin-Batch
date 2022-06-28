@@ -46,7 +46,7 @@ public class SpringBatchConfig {
                 .name("bitcoinItemReader")
                 .resource(new ClassPathResource(fileInput))
                 .delimited()
-                .names("timeStamp", "date_time", "open", "high", "low", "close", "volume_btc", "volume_currency", "weighted_price")
+                .names("id", "timestamp", "date_time", "open", "high", "low", "close", "volume_btc", "volume_currency", "weighted_price")
                 .fieldSetMapper(new BeanWrapperFieldSetMapper<BitcoinData>() {{
                     setTargetType(BitcoinData.class);
                 }})
@@ -85,7 +85,7 @@ public class SpringBatchConfig {
 //                .writer(writer())
 //                .build();
 //    }
-
+//
 //    @Bean
 //    public Job runJob(){
 //        return jobBuilderFactory.get("importBitcoinData")

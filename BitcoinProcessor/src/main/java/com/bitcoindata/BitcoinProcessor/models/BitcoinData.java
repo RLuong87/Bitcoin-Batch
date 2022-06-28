@@ -1,10 +1,17 @@
 package com.bitcoindata.BitcoinProcessor.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Data
+@AllArgsConstructor
+@Builder
 @Entity
 public class BitcoinData {
 
@@ -114,19 +121,5 @@ public class BitcoinData {
 
     public void setWeighted_price(String weighted_price) {
         this.weighted_price = weighted_price;
-    }
-
-    @Override
-    public String toString() {
-        return "BitcoinData{" +
-                "timeStamp='" + timestamp + '\'' +
-                ", open='" + open + '\'' +
-                ", high='" + high + '\'' +
-                ", low='" + low + '\'' +
-                ", close='" + close + '\'' +
-                ", volume_BTC='" + volume_btc + '\'' +
-                ", volume_Currency='" + volume_currency + '\'' +
-                ", weighted_Price='" + weighted_price + '\'' +
-                '}';
     }
 }
